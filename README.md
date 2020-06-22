@@ -96,8 +96,8 @@ Kütüphanede inen pin bağlantıları ile bizim oluşturdugumuz pin bağlantıl
 Scripti aşadaki gibi düzenleyiniz.
 
 Raspberry Pi pin configuration: <br/>
-`lcd_rs        = 4
-lcd_en        = 24
+`lcd_rs        = 4<br/>
+lcd_en        = 24<br/>
 lcd_d4        = 23
 lcd_d5        = 17
 lcd_d6        = 18
