@@ -83,7 +83,7 @@ RFID RC522 ile Raspberry Pi Arasındaki Bağlantı <br/>
 
 Gerekli bağlantılar sağlandıysa.Kütüphaneyi klonlayarak test edebiliriz.
 
-'cd ./Adafruit_Python_CharLCD'
+`cd ./Adafruit_Python_CharLCD`
 
 
 Kütüphaneyi klonladıgınız dizine gidiniz ve aşadaki komutları kullanarak setup.py sriptini çalıştırın.
