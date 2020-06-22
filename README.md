@@ -82,4 +82,5 @@ RFID RC522 ile Raspberry Pi Arasındaki Bağlantı <br/>
 ## 16*2 LCD Ekranın Test Edilmesi ve Gerekli Kütüphanin İndirilmesi
 
 Gerekli bağlantılar sağlandıysa.Kütüphaneyi klonlayarak test edebiliriz.
+
 'git clone https://github.com/pimylifeup/Adafruit_Python_CharLCD.git'
