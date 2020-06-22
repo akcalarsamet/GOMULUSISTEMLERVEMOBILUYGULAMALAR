@@ -89,4 +89,8 @@ Gerekli bağlantılar sağlandıysa.Kütüphaneyi klonlayarak test edebiliriz.
 
 Kütüphaneyi klonladıgınız dizine gidiniz ve aşadaki komutları kullanarak setup.py sriptini çalıştırın.
 
+Kütüphanede inen pin bağlantıları ile bizim oluşturdugumuz pin bağlantıları farklı olabilir aşadaki gibi oluşturunuz.Scripti düğzenlemek için nano editorünü kullanabilirsiniz.
 
+`nano ~/Adafruit_Python_CharLCD/examples/char_lcd.py`
+
+Scripti aşadaki gibi düzenleyiniz.
