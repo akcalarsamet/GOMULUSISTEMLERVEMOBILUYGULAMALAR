@@ -53,28 +53,33 @@ RFID kartlar kronolojik olarak bakıldığında; sadece okunabilir ve içinde se
 
 Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşamasında bize kolaylık sağlayacaktır. RC522 modülü 8 pine sahiptir ama biz sadece okuma yapacagımız için kartlar üzerinde herhangi bir yazma işlemi olmayacağından(IRQ pini kullanılmayacak) 7 pinini kullanarak Raspberry Pi GPIO pinleri ile bağlantı kuracağız.
 
-RFID RC522 ile Raspberry Pi Arasındaki Bağlantı
-•	RC522 SDA pini     => Raspberry Pi Pin 24.
-•	RC522  SCK pini     => Raspberry Pi Pin 23.
-•	RC522  MOSI pini  => Raspberry Pi Pin 19.
-•	RC522 MISO pini   => Raspberry Pi Pin 21.
-•	RC522 GND pini    => Raspberry Pi Pin 6.
-•	RC522 RST pini     => Raspberry Pi Pin 22.
-•	RC522 3.3v pini    => Raspberry Pi Pin 1.
+RFID RC522 ile Raspberry Pi Arasındaki Bağlantı <br/>
+•	RC522 SDA pini     => Raspberry Pi Pin 24.  <br/>
+•	RC522  SCK pini     => Raspberry Pi Pin 23. <br/>
+•	RC522  MOSI pini  => Raspberry Pi Pin 19. <br/>
+•	RC522 MISO pini   => Raspberry Pi Pin 21. <br/>
+•	RC522 GND pini    => Raspberry Pi Pin 6. <br/>
+•	RC522 RST pini     => Raspberry Pi Pin 22. <br/>
+•	RC522 3.3v pini    => Raspberry Pi Pin 1. <br/>
 
-LCD Ekran ve Potansiyometre Bağlantıları
+## LCD Ekran ve Potansiyometre Bağlantıları 
 
-•	LCD’nin 1.pini (Ground) Breadboardın toprak hattına
-•	LCD’nin 2.pini (VCC / 5V) Breadboardın pozitif hattına
-•	LCD’nin 3.pini (V0) to potansiyometrenin 2. pinine
-•	LCD’nin 4.pini (RS) Raspberry pi 7.pinine (GPIO4)
-•	LCD’nin 5.pini (RW) Breadboardın toprak hattına
-•	LCD’nin 6.pini (EN)   Raspberry pi 18.pinine (GPIO24 )
-•	LCD’nin 11.pini of LCD (D4) Raspberry pi 16.pinine (GPIO23 )
-•	LCD’nin 12.pini of LCD (D5) Raspberry pi 11.pinine (GPIO17)
-•	LCD’nin 13.pini of LCD (D6) Raspberry pi 12.pinine  (GPIO18)
-•	LCD’nin 14.pini of LCD (D7) Raspberry pi 15.pinine  (GPIO22)
-•	LCD’nin 15.pini of LCD (LED +) Breadboardın pozitif hattına
-•	LCD’nin 16.pini of LCD (LED -) Breadboardın toprak hattına
-•	Potansiyometrnin sol pini Breadboardın toprak hattına
-•	Potansiyometrnin sağ pini  Breadboardın pozitif hattına
+•	LCD’nin 1.pini (Ground) Breadboardın toprak hattına <br/>
+•	LCD’nin 2.pini (VCC / 5V) Breadboardın pozitif hattına <br/>
+•	LCD’nin 3.pini (V0) to potansiyometrenin 2. pinine <br/>
+•	LCD’nin 4.pini (RS) Raspberry pi 7.pinine (GPIO4) <br/>
+•	LCD’nin 5.pini (RW) Breadboardın toprak hattına <br/>
+•	LCD’nin 6.pini (EN)   Raspberry pi 18.pinine (GPIO24 ) <br/>
+•	LCD’nin 11.pini of LCD (D4) Raspberry pi 16.pinine (GPIO23 ) <br/>
+•	LCD’nin 12.pini of LCD (D5) Raspberry pi 11.pinine (GPIO17) <br/>
+•	LCD’nin 13.pini of LCD (D6) Raspberry pi 12.pinine  (GPIO18) <br/>
+•	LCD’nin 14.pini of LCD (D7) Raspberry pi 15.pinine  (GPIO22) <br/>
+•	LCD’nin 15.pini of LCD (LED +) Breadboardın pozitif hattına <br/>
+•	LCD’nin 16.pini of LCD (LED -) Breadboardın toprak hattına <br/>
+•	Potansiyometrnin sol pini Breadboardın toprak hattına <br/>
+•	Potansiyometrnin sağ pini  Breadboardın pozitif hattına <br/>
+
+## 16*2 LCD Ekranın Test Edilmesi ve Gerekli Kütüphanin İndirilmesi
+
+Gerekli bağlantılar sağlandıysa.Kütüphaneyi klonlayarak test edebiliriz.
+'git clone https://github.com/pimylifeup/Adafruit_Python_CharLCD.git'
