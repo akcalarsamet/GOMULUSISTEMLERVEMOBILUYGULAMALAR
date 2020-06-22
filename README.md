@@ -42,4 +42,39 @@ SD Card Formatter programı ile SD Kart formatlanabilir. Daha sonra "Win32 Disk 
 
 RC522 RFID Okuyucu Kartı, NFC frekansı olan 13,56 MHz frekansında çalışan tagler üzerinde okuma ve yazma işlemeni yapabilen, düşük güç tüketimli, ufak boyutlu bir karttır.
 Raspberry pi,arduino başta olmak üzere bir çok mikrodenetleyeci platformu ile beraber rahatlıkla kullanılabilir. 424 kbit/s haberleşme hızına sahiptir. RFID üzerinde farklı şifreleme türlerini desteklemektedir. Desteklediği kart türleri mifare1 S50, mifare1 S70 mifare ultralight, mifare pro ve  mifare desfire'dir. 
+
 **Not:** 125 KHz frekansında çalışan RFID kartlarını desteklememektedir. Yalnızca 13,56 MHz frekansında çalışan kartları desteklemektedir. NFC modülleri bu frekansta çalıştığı için NFC kartları ile beraber kullanılabilir.
+
+## RFID Kart Teknolojileri
+
+RFID kartlar kronolojik olarak bakıldığında; sadece okunabilir ve içinde seri numarası bulundurabilen basit bir yapıdan hem okunabilir hem de yazılabilir, içinde bir çok bilgiyi saklayabilecek yüksek hafızaya sahip, kopyalanmaya karşı güvenli, şifreli haberleşen karmaşık bir yapıya ulaşmıştır. Bu süreçte çok değişik özelliklere sahip RFID kartlar üretilmiştir.
+ Her RFID kart hafızasında fabrikasyon olarak kodlanmış bir kart numarası ile tedarik edilir. Bu kart numarasının aynısı başka hiç bir kartta tekrar kullanılmaz. Bunu üretici firmalar garanti etmektedirler. Dünya üzerinde birbirinden farklı olan bu numaralar ' Unique ID ' olarak bilinmektedir.
+## Donanım Yapısı
+
+Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşamasında bize kolaylık sağlayacaktır. RC522 modülü 8 pine sahiptir ama biz sadece okuma yapacagımız için kartlar üzerinde herhangi bir yazma işlemi olmayacağından(IRQ pini kullanılmayacak) 7 pinini kullanarak Raspberry Pi GPIO pinleri ile bağlantı kuracağız.
+
+RFID RC522 ile Raspberry Pi Arasındaki Bağlantı
+•	RC522 SDA pini     => Raspberry Pi Pin 24.
+•	RC522  SCK pini     => Raspberry Pi Pin 23.
+•	RC522  MOSI pini  => Raspberry Pi Pin 19.
+•	RC522 MISO pini   => Raspberry Pi Pin 21.
+•	RC522 GND pini    => Raspberry Pi Pin 6.
+•	RC522 RST pini     => Raspberry Pi Pin 22.
+•	RC522 3.3v pini    => Raspberry Pi Pin 1.
+
+LCD Ekran ve Potansiyometre Bağlantıları
+
+•	LCD’nin 1.pini (Ground) Breadboardın toprak hattına
+•	LCD’nin 2.pini (VCC / 5V) Breadboardın pozitif hattına
+•	LCD’nin 3.pini (V0) to potansiyometrenin 2. pinine
+•	LCD’nin 4.pini (RS) Raspberry pi 7.pinine (GPIO4)
+•	LCD’nin 5.pini (RW) Breadboardın toprak hattına
+•	LCD’nin 6.pini (EN)   Raspberry pi 18.pinine (GPIO24 )
+•	LCD’nin 11.pini of LCD (D4) Raspberry pi 16.pinine (GPIO23 )
+•	LCD’nin 12.pini of LCD (D5) Raspberry pi 11.pinine (GPIO17)
+•	LCD’nin 13.pini of LCD (D6) Raspberry pi 12.pinine  (GPIO18)
+•	LCD’nin 14.pini of LCD (D7) Raspberry pi 15.pinine  (GPIO22)
+•	LCD’nin 15.pini of LCD (LED +) Breadboardın pozitif hattına
+•	LCD’nin 16.pini of LCD (LED -) Breadboardın toprak hattına
+•	Potansiyometrnin sol pini Breadboardın toprak hattına
+•	Potansiyometrnin sağ pini  Breadboardın pozitif hattına
