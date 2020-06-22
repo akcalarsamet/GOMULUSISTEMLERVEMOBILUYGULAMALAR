@@ -96,10 +96,20 @@ Kütüphanede inen pin bağlantıları ile bizim oluşturdugumuz pin bağlantıl
 Scripti aşadaki gibi düzenleyiniz.
 
 Raspberry Pi pin configuration: <br/>
-`lcd_rs        = 4<br/>
-lcd_en        = 24<br/>
+`lcd_rs        = 4
+lcd_en        = 24
 lcd_d4        = 23
 lcd_d5        = 17
 lcd_d6        = 18
 lcd_d7        = 22`
 
+Düzenlemeyi yaptıkan sonra CTRL +X  sonra Y ENTER tuşlarına basarak çıkınız.
+Son olarak LCD Kütüphanesi GPIOları kullanacağı için GPIO kütüphanesini aşadaki komutla yükleyiniz.
+
+`sudo pip3 install RPi.GPIO`
+
+Aşadaki komutla lcd ekranınızı test edebilirsiniz.
+
+`python3 ~/Adafruit_Python_CharLCD/examples/char_lcd.py`
+
+## SPI Arayüzünü Etkinleştirme
