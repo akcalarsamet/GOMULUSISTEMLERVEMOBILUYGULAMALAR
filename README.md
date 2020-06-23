@@ -230,3 +230,6 @@ Hatırlayınıız ,veritabanınımızın  adı attendancesystem.Veritabanını k
 |  2 | 110067762035   | Ali     | 2020-05-31 11:28:35    | <br/>
 +--+------------------+---------+------------------------+ <br/>
 
+Artık "kullanıcılar" tablosunu kontrol ettiğimize göre, "attendance" tablomuza bir göz atalım. Okutunuz kartların user_id’lerine bakarak kimeait olduklarını users tablosundan control edebilirsiniz.Eğer tanımsız bir kart okutulursa user_id  0 yazacak tabloda.
+
+`SELECT * FROM attendance;`
