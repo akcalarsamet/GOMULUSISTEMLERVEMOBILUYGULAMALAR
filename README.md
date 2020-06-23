@@ -223,13 +223,26 @@ Hatırlayınıız ,veritabanınımızın  adı attendancesystem.Veritabanını k
 
 `SELECT * FROM users; `
 
-+--+------------------+---------+------------------------+ <br/>
-| id | rfid_uid       | name    | created                | <br/>
-+--+------------------+---------+------------------------+ <br/>
-|  1 | 110067762031   | Samet   | 2020-05-31 11:28:04    | <br/>
-|  2 | 110067762035   | Ali     | 2020-05-31 11:28:35    | <br/>
-+--+------------------+---------+------------------------+ <br/>
 
 Artık "kullanıcılar" tablosunu kontrol ettiğimize göre, "attendance" tablomuza bir göz atalım. Okutunuz kartların user_id’lerine bakarak kimeait olduklarını users tablosundan control edebilirsiniz.Eğer tanımsız bir kart okutulursa user_id  0 yazacak tabloda.
 
 `SELECT * FROM attendance;`
+
+## WEB ARAYÜZÜN OLUŞTURULMASI
+
+Bu bölüme başlamadan önce, PHP ile kullanmak için NGINX'i ayarlamanız gerekmektedir.Bu ayarlar için çalıştrılacak scriptler için bir dizin oluşturalım.
+
+`sudo mkdir /var/www/html/attendance `
+Gerekli ayarlar için githubdan aşadaki komutla scirptleri klonlayalım.
+
+`sudo git clone https://github.com/pimylifeup/attendance-system-frontend.git /var/www/html/attendance `
+
+İndirdiginiz dizinden common.php bulunuz.Common.php ‘yi degiştiriniz.Passwordyazan yere giriş için bir şifre giriniz.
+
+`sudo nano /var/www/html/attendance/common.php `
+
+https://192.168.140/attendance
+
+Açılan pencereden web arayüzdede okutulan kartları görebilirsiniz.
+
+## Amazon Web Services
