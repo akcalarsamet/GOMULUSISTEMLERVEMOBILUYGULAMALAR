@@ -113,3 +113,45 @@ Aşadaki komutla lcd ekranınızı test edebilirsiniz.
 `python3 ~/Adafruit_Python_CharLCD/examples/char_lcd.py`
 
 ## SPI Arayüzünü Etkinleştirme
+
+Raspberry Pi ile  RFID RC522 sensörünün haberleşebilmesi için SPI haberleşmeyi aktif hale getirmemiz gerekli.
+`sudo raspi-config`
+
+Raspberry Pi ile  RFID RC522 sensörünün haberleşebilmesi için SPI haberleşmeyi aktif hale getirmemiz gerekli.
+sudo raspi-config
+Komutu çalıştırdıktan sonra, yapılandırabileceğiniz çeşitli seçenekleri gösteren bir ekranla göreceksiniz.
+Açılan pencereden yukarı aşağı tuşlarını kullanarak “5 Interfacing Options” seçin ve ENTER’a basınız.
+Açılan ekranda, “P4 SPI” seçeneğini seçiniz ve Entera basınız.
+Bu işlemlerdenm sonra SPI aktif hale gelecektir.Şu mesajla karşılamaşnız lazım.” The SPI interface is enabled”.
+Bütün ayarlarınız yapılandırılması için raspberry pi’nin resetlenmesi lazım.Aşadaki komutu kullanabilirsiniz.
+
+Yeniden başlatma işleminden sonra SPI arayüzünün aktif olup olmadığını control etmek için.Aşadaki komutu kullanabilirsiniz.
+
+`lsmod | grep spi`
+
+“spi_bcm2835” yazını görüyorsanız herşey düzgüncene ayarlanmıştır.Eğer bu yazıyı göremediyseniz buraya kadar gelinen adımları gözden geçiriniz.
+
+RFID RC522 Test Edilmesi
+
+Spidev kütüphanesi kullanarak rfid arayüzü aktif hale getircez.Bunun için aşadaki komutları uygulayınız.
+
+`sudo pip3 install spidev`
+
+Spidev kütüphanesi indirdikten sonra “pip” komutunu kullanarak MFRC522 kütüphanesini indirmeye devam etmemiz gerekiyor.
+
+`sudo pip3 install mfrc522`
+
+Şimdi RC522'mizin aslında RFID kartlarını okuyabildiğini ve her şeyin doğru bir şekilde bağlandığını test etmek için kısa bir script yazmamız gerekecek. Nano editöryüle read.py adında bir dosya açınız.
+`
+#!/usr/bin/env python
+import RPi.GPIO as GPIO
+from mfrc522 import SimpleMFRC522
+
+reader = SimpleMFRC522()
+try:
+        id, text = reader.read()
+        print(id)
+        print(text)
+finally:
+        GPIO.cleanup()
+`
