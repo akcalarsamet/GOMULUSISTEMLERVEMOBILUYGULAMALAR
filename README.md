@@ -142,15 +142,13 @@ Spidev kütüphanesi indirdikten sonra “pip” komutunu kullanarak MFRC522 kü
 `sudo pip3 install mfrc522`
 
 Şimdi RC522'mizin aslında RFID kartlarını okuyabildiğini ve her şeyin doğru bir şekilde bağlandığını test etmek için kısa bir script yazmamız gerekecek. Nano editöryüle read.py adında bir dosya açınız.
+Read.py'deki kodları yazınız.
 
-` #!/usr/bin/env python  `
- `import RPi.GPIO as GPIO `
- `from mfrc522 import SimpleMFRC522`
- `reader = SimpleMFRC522()`
-`try:`
-        `id, text = reader.read()`
-        `print(id)`
-        `print(text)`
-`finally:`
-        `GPIO.cleanup()`
-`
+## 3RFID SİSTEM İÇİN VERİ TABANI OLUŞTURULMASI
+
+Okutulan kartların geçersiz,geçerli ise kime ait olduğunu anlamamız için veritabanı oluşturmamz gerekli. MYSQL Database kurup ,tablolalarımızı oluşturcaz.
+Aşadaki komutu kullanarak Raspberry Pi’mize MYSQL’I kuralım.
+
+'sudo apt-get install mysql-server -y`
+
+Veritabanımızı daha güvenli hale getirmek için  “secure installation” paketini kurunuz.Paketi kurmak için aşadaki komutu kullanınız.
