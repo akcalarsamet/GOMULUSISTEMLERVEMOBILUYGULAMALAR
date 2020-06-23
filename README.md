@@ -207,3 +207,26 @@ terminalden bu komut çalıştırılarak kart eklenip eklenmediği control edili
 Kartlar kaydedildikten sonra ,düzgün çalıp çalışmadıgını control etmek için.Aaşadaki scripti çalıştırınız.Burda sonsuz bir döngü içinde kart sorgusu oluşturcaz.Kart bulunursa kime ait olduğunun ve saat kaçta okutulduğu veri tabanında tutlacak.Bulunamazsa geçersiz olduğu tutulacaktır. ("Select id, name FROM users WHERE rfid_uid="+str(id))  id’ye göre sorgu oluşturup veri tabanında o id’nin olup olmadığı control ediliyor.
 
 `nano ~/attendancesystem/check_attendance.py` scriptini yazdıktan sonra çalıştırarak kart yakınlaştırıp test ediniz.
+
+## VERİ TABANIN KONTROL EDİLMESİ
+
+Okutulan kartların kayıtlarını almak için MYSQL Command Line aracını çalıştıralım.
+
+`sudo mysql -u root -p`
+
+Hatırlayınıız ,veritabanınımızın  adı attendancesystem.Veritabanını kullanmak için
+
+`use attendancesystem;`
+
+"Kullanıcılar" tablosundan  aşada belirten basit bir SELECT SQL çağrısı çalıştırarak yapabiliriz. Aşağıdaki sorguda kullanılan yıldız işareti (*), tüm sütunları almak istediğimiz anlamına gelir.
+“Kullanıcılar” tablosunda bulunan tüm kullanıcıları almak için aşağıdaki komutu yazın.
+
+`SELECT * FROM users; `
+
++--+------------------+---------+------------------------+
+| id | rfid_uid       | name    | created                |
++--+------------------+---------+------------------------+
+|  1 | 110067762031   | Samet   | 2020-05-31 11:28:04    |
+|  2 | 110067762035   | Ali     | 2020-05-31 11:28:35    |
++--+------------------+---------+------------------------+
+
