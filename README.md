@@ -206,4 +206,4 @@ terminalden bu komut çalıştırılarak kart eklenip eklenmediği control edili
 
 Kartlar kaydedildikten sonra ,düzgün çalıp çalışmadıgını control etmek için.Aaşadaki scripti çalıştırınız.Burda sonsuz bir döngü içinde kart sorgusu oluşturcaz.Kart bulunursa kime ait olduğunun ve saat kaçta okutulduğu veri tabanında tutlacak.Bulunamazsa geçersiz olduğu tutulacaktır. ("Select id, name FROM users WHERE rfid_uid="+str(id))  id’ye göre sorgu oluşturup veri tabanında o id’nin olup olmadığı control ediliyor.
 
-`nano ~/attendancesystem/check_attendance.py` scriptini çalıştırarak kart yakınlaştırıp test ediniz.
+`nano ~/attendancesystem/check_attendance.py` scriptini yazdıktan sonra çalıştırarak kart yakınlaştırıp test ediniz.
