@@ -246,3 +246,11 @@ https://192.168.140/attendance
 Açılan pencereden web arayüzdede okutulan kartları görebilirsiniz.
 
 ## Amazon Web Services
+
+Amazon web services yani AWS dünyanın en hızlı büyüyen bulut hizmetlerinin genel adıdır. Google(Cloud Platform), Microsoft(Azure), IBM(SoftLayer, Bluemix) gibi rakipleri vardır.
+
+https://aws.amazon.com/tr/ sitesine giderek konsolda oturama tıklayarak aws hesabı alabilirsiniz.Kullanıcı hesabınızı oşuştururken hesab bilgilerinizide alacaktır.3 farklı hesap türü vardır.
+Basic Plan :Ücretsizdir.Sınırlı sayıda depolama alanı verir.Bizde bunu kullanacağız ve sınırlı sayıda kart kayıdı tutulabilcek.
+Developer Plan:Aylık 29 Dolardır.Email yoluyla destek daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
+Bussines Plan :Aylık 100 Dolardır.7/24  telefon.chat email yoluyla destek.Daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
+
