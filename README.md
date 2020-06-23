@@ -149,6 +149,61 @@ Read.py'deki kodları yazınız.
 Okutulan kartların geçersiz,geçerli ise kime ait olduğunu anlamamız için veritabanı oluşturmamz gerekli. MYSQL Database kurup ,tablolalarımızı oluşturcaz.
 Aşadaki komutu kullanarak Raspberry Pi’mize MYSQL’I kuralım.
 
-'sudo apt-get install mysql-server -y`
+`sudo apt-get install mysql-server -y`
 
 Veritabanımızı daha güvenli hale getirmek için  “secure installation” paketini kurunuz.Paketi kurmak için aşadaki komutu kullanınız.
+
+`sudo mysql_secure_installation`
+
+Açılan pencerelere  “y” tuşuna basarak ilerleyiniz.Ardından şu komutu çalıştırınız.
+
+sudo mysql -u root -p
+
+Butun bu işlemlerden sonra veritabanımızı oluşturabilirz.Veritbanınıza başka isimde verebilirsiniz.Ben “attendancesystem“ adını vereceğim.Komutunu kullanarak veritabanınızı oluşturun.
+
+`CREATE DATABASE attendancesystem;`
+
+Oluşturudugunuz veritabanına kullanıcı ve şifre vermek için aşadaki komutu kullanınız.
+
+`CREATE USER sametakcalar@'localhost' IDENTIFIED BY 'samet'; `
+
+`GRANT ALL PRIVILEGES ON sametakcalar.* TO sametakcalar @'localhost'; `
+
+Bu komutlardan sonra attendancesystem veri tabanına doğrudan erişim vermek için aşadaki komutu kullanınız.
+
+use attendancesystem;
+
+MYSQL  aracından exit diyerek çıkınız.
+
+Oluşturacağınız tablolardaki sütünların anlamları:
+Tablodaki satırların anlamları:
+
+id - Bu, geçerli satırı takip etmek için kullanılan ve otomatik olarak artan bir tam sayıdır.
+
+user_id - Bu bir tamsayıdır ve bunu, kullanıcı tablomuzda aynı kimliğe sahip bir kullanıcıyla ilişkilendirmek için kullanırız.
+
+clock_in - Bu değişken bir SQL zaman damgasını saklar. Bu zaman damgası, kullanıcı RFID kartını RFID okuyucusuna dokunduğunda izlemek için kullanılır.
+
+
+rfid_uid - Bu değişken, bir RFID kartına RFID okuyucusuna dokunduğunda yakalanan UID'yi depolamak için kullanılır.
+
+name - Bu değişken, RFID kartın sahibi olan kişinin adını saklar.
+Oluşturuldu - Bu değişkeni, kullanıcının ne zaman oluşturulduğunu takip etmek için kullanırız.
+
+## RFID VERİTABANINA KULLANICI KAYDETME
+
+Veritabanına kullanıcı eklemek için  “MYSQL Connector” pip ile çalıştırınız.
+
+Veri tabanınına kullanıcı ekleyip geçerli hale getirmek için bir script oluşturup aşadaki kodları yazınız.Insert Into ile başlayan kodlar yeni kullanıcı oluşlurmak için kullanılır. save_user.py'deki kodlar yazıldıktan sonra
+
+`python3 ~/attendancesystem/save_user.py `
+
+terminalden bu komut çalıştırılarak kart eklenip eklenmediği control edilir
+
+`sudo pip3 install mysql-connector-python`
+
+## KART SORGULAMA
+
+Kartlar kaydedildikten sonra ,düzgün çalıp çalışmadıgını control etmek için.Aaşadaki scripti çalıştırınız.Burda sonsuz bir döngü içinde kart sorgusu oluşturcaz.Kart bulunursa kime ait olduğunun ve saat kaçta okutulduğu veri tabanında tutlacak.Bulunamazsa geçersiz olduğu tutulacaktır. ("Select id, name FROM users WHERE rfid_uid="+str(id))  id’ye göre sorgu oluşturup veri tabanında o id’nin olup olmadığı control ediliyor.
+
+`nano ~/attendancesystem/check_attendance.py` scriptini çalıştırarak kart yakınlaştırıp test ediniz.
