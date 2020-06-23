@@ -143,12 +143,11 @@ Spidev kütüphanesi indirdikten sonra “pip” komutunu kullanarak MFRC522 kü
 
 Şimdi RC522'mizin aslında RFID kartlarını okuyabildiğini ve her şeyin doğru bir şekilde bağlandığını test etmek için kısa bir script yazmamız gerekecek. Nano editöryüle read.py adında bir dosya açınız.
 `
-#!/usr/bin/env python
-import RPi.GPIO as GPIO
-from mfrc522 import SimpleMFRC522
-reader = SimpleMFRC522()
+ #!/usr/bin/env python
+ import RPi.GPIO as GPIO
+ from mfrc522 import SimpleMFRC522
+ reader = SimpleMFRC522()
 try:
-
         id, text = reader.read()
         print(id)
         print(text)
