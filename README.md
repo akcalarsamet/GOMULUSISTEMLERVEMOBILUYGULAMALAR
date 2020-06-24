@@ -44,9 +44,7 @@ SD Card Formatter programı ile SD Kart formatlanabilir. Daha sonra "Win32 Disk 
   Basitçe RFID Sistemin Çalışma Mantığını Gösteren bir Görsel
  
 ## RFID RC522 Sensör
-![4](https://user-images.githubusercontent.com/66904198/85623839-a8eebf80-b671-11ea-9a5e-eb9b48af77d7.jpg)
-
-RC522 RFID Okuyucu Kartı, NFC frekansı olan 13,56 MHz frekansında çalışan tagler üzerinde okuma ve yazma işlemeni yapabilen, düşük güç tüketimli, ufak boyutlu bir karttır.
+![4](https://user-images.githubusercontent.com/66904198/85623839-a8eebf80-b671-11ea-9a5e-eb9b48af77d7.jpg) RC522 RFID Okuyucu Kartı, NFC frekansı olan 13,56 MHz frekansında çalışan tagler üzerinde okuma ve yazma işlemeni yapabilen, düşük güç tüketimli, ufak boyutlu bir karttır.
 Raspberry pi,arduino başta olmak üzere bir çok mikrodenetleyeci platformu ile beraber rahatlıkla kullanılabilir. 424 kbit/s haberleşme hızına sahiptir. RFID üzerinde farklı şifreleme türlerini desteklemektedir. Desteklediği kart türleri mifare1 S50, mifare1 S70 mifare ultralight, mifare pro ve  mifare desfire'dir. 
 
 **Not:** 125 KHz frekansında çalışan RFID kartlarını desteklememektedir. Yalnızca 13,56 MHz frekansında çalışan kartları desteklemektedir. NFC modülleri bu frekansta çalıştığı için NFC kartları ile beraber kullanılabilir.
