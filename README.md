@@ -50,7 +50,7 @@ Raspberry pi,arduino başta olmak üzere bir çok mikrodenetleyeci platformu ile
 
 **Not:** 125 KHz frekansında çalışan RFID kartlarını desteklememektedir. Yalnızca 13,56 MHz frekansında çalışan kartları desteklemektedir. NFC modülleri bu frekansta çalıştığı için NFC kartları ile beraber kullanılabilir.
 
-![4](https://user-images.githubusercontent.com/66904198/85623717-82308900-b671-11ea-95c2-1c9dd0a8d150.jpg)
+![4](https://user-images.githubusercontent.com/66904198/85623839-a8eebf80-b671-11ea-9a5e-eb9b48af77d7.jpg)
 
 ## RFID Kart Teknolojileri
 
