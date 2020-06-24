@@ -49,6 +49,7 @@ RC522 RFID Okuyucu Kartı, NFC frekansı olan 13,56 MHz frekansında çalışan 
 Raspberry pi,arduino başta olmak üzere bir çok mikrodenetleyeci platformu ile beraber rahatlıkla kullanılabilir. 424 kbit/s haberleşme hızına sahiptir. RFID üzerinde farklı şifreleme türlerini desteklemektedir. Desteklediği kart türleri mifare1 S50, mifare1 S70 mifare ultralight, mifare pro ve  mifare desfire'dir. 
 
 **Not:** 125 KHz frekansında çalışan RFID kartlarını desteklememektedir. Yalnızca 13,56 MHz frekansında çalışan kartları desteklemektedir. NFC modülleri bu frekansta çalıştığı için NFC kartları ile beraber kullanılabilir.
+
 ![4](https://user-images.githubusercontent.com/66904198/85623839-a8eebf80-b671-11ea-9a5e-eb9b48af77d7.jpg) 
 
 ## RFID Kart Teknolojileri
@@ -84,6 +85,7 @@ RFID RC522 ile Raspberry Pi Arasındaki Bağlantı <br/>
 •	LCD’nin 16.pini of LCD (LED -) Breadboardın toprak hattına <br/>
 •	Potansiyometrnin sol pini Breadboardın toprak hattına <br/>
 •	Potansiyometrnin sağ pini  Breadboardın pozitif hattına <br/>
+![2](https://user-images.githubusercontent.com/66904198/85624314-624d9500-b672-11ea-9368-2df6d59fd8c7.png)
 
 ## 16*2 LCD Ekranın Test Edilmesi ve Gerekli Kütüphanin İndirilmesi
 
@@ -117,8 +119,6 @@ Son olarak LCD Kütüphanesi GPIOları kullanacağı için GPIO kütüphanesini 
 Aşadaki komutla lcd ekranınızı test edebilirsiniz.
 
 `python3 ~/Adafruit_Python_CharLCD/examples/char_lcd.py`
-
-![2](https://user-images.githubusercontent.com/66904198/85624314-624d9500-b672-11ea-9368-2df6d59fd8c7.png)
 
 ## SPI Arayüzünü Etkinleştirme
 
