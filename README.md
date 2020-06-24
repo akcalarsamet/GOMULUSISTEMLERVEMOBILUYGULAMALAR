@@ -262,3 +262,4 @@ Basic Plan :Ücretsizdir.Sınırlı sayıda depolama alanı verir.Bizde bunu kul
 Developer Plan:Aylık 29 Dolardır.Email yoluyla destek daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
 Bussines Plan :Aylık 100 Dolardır.7/24  telefon.chat email yoluyla destek.Daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
 
+![amazon](https://user-images.githubusercontent.com/66904198/85624689-f7e92480-b672-11ea-9e1e-7e5912a8dfd5.png)
