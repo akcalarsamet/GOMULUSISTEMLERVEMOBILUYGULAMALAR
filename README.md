@@ -2,6 +2,8 @@
 ## Projenin Amacı
 ARM mimarisine sahip bir mikrodenetleyici olan Raspberry Pi kartı ile  RFID RC522 sensörü kullanılarak ,okutulan kartlarla personelin girişinin çıkışının control edilip,2*16 LCD ekranda gösterlip,web arayüz ve amazon veritabanına aktarılması.
 
+![2](https://user-images.githubusercontent.com/66904198/85622603-c4f16180-b66f-11ea-8b0a-07fbf6739977.jpg)
+
 # Proje Gereksinimleri
 1-Raspberry Pi 3B+ <br/>
 2- RFID RC522 <br/>
