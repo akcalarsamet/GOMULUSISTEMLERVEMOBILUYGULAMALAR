@@ -41,7 +41,9 @@ SD Card Formatter programı ile SD Kart formatlanabilir. Daha sonra "Win32 Disk 
 
   RFID teknolojisi bugün tüm dünyada yaygın bir kullanım alanına sahiptir. Personel kontrolü, ürün ve hayvan takibi, güvenlik bunlardan sadece birkaçıdır. RFID kartların yüksek güvenliğe sahip olanları Dünya'da kimlik kartı ve kredi kartı olarak da kullanılmaktadır.
   
+  Basitçe RFID Sistemin Çalışma Mantığını Gösteren bir Görsel
   
+  ![rfid-reader](https://user-images.githubusercontent.com/66904198/85622852-29acbc00-b670-11ea-9086-6c81f04e15e0.gif)
 
 ## RFID RC522 Sensör
 
