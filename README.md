@@ -89,7 +89,9 @@ Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşama
 
 ## 16*2 LCD Ekranın Test Edilmesi ve Gerekli Kütüphanin İndirilmesi
 
-Gerekli bağlantılar sağlandıysa.Kütüphaneyi klonlayarak test edebiliriz.
+Gerekli bağlantılar sağlandıysa,kütüphaneyi klonlayarak test edebiliriz.
+
+`git clone https://github.com/pimylifeup/Adafruit_Python_CharLCD.git`
 
 `cd ./Adafruit_Python_CharLCD `
 
