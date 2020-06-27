@@ -155,7 +155,7 @@ Spidev kütüphanesi indirdikten sonra “pip” komutunu kullanarak MFRC522 kü
 Şimdi RC522'mizin aslında RFID kartlarını okuyabildiğini ve her şeyin doğru bir şekilde bağlandığını test etmek için kısa bir script yazmamız gerekecek. Nano editöryüle read.py adında bir dosya açınız.
 read.py'deki kodları yazınız.
 
-## 3RFID SİSTEM İÇİN VERİ TABANI OLUŞTURULMASI
+## RFID SİSTEM İÇİN VERİ TABANI OLUŞTURULMASI
 
 Okutulan kartların geçersiz,geçerli ise kime ait olduğunu anlamamız için veritabanı oluşturmamz gerekli. MYSQL Database kurup ,tablolalarımızı oluşturacağız.
 Aşadaki komutu kullanarak Raspberry Pi’mize MYSQL’ı kuralım.
@@ -240,12 +240,13 @@ Artık "kullanıcılar" tablosunu kontrol ettiğimize göre, "attendance" tablom
 
 ## WEB ARAYÜZÜN OLUŞTURULMASI
 
-Bu bölüme başlamadan önce, PHP ile kullanmak için **NGINX**'i ayarlamanız gerekmektedir.Bu ayarlar için çalıştrılacak scriptler için bir dizin oluşturalım.
+Bu bölüme başlamadan önce, PHP ile kullanmak için **NGINX**'i ayarlamanız gerekmektedir.Bunun için çalıştırılacak scriptler için bir dizin oluşturalım.
 
 `sudo mkdir /var/www/html/attendance `
+
 Gerekli ayarlar için githubdan aşadaki komutla scirptleri klonlayalım.
 
-`sudo git clone https://github.com/pimylifeup/attendance-system-frontend.git /var/www/html/attendance `
+`sudo git clone https://github.com/akcalarsamet/GOMULUSISTEMLERVEMOBILUYGULAMALAR/tree/master/Kodlar/Web%20Aray%C3%BCz `
 
 İndirdiginiz dizinden common.php bulunuz.Common.php ‘yi degiştiriniz.Passwordyazan yere giriş için bir şifre giriniz.
 
@@ -259,22 +260,23 @@ Açılan pencereden web arayüzdede okutulan kartları görebilirsiniz.
 
 Amazon web services yani AWS dünyanın en hızlı büyüyen bulut hizmetlerinin genel adıdır. Google(Cloud Platform), Microsoft(Azure), IBM(SoftLayer, Bluemix) gibi rakipleri vardır.
 
-https://aws.amazon.com/tr/ sitesine giderek konsolda oturama tıklayarak aws hesabı alabilirsiniz.Kullanıcı hesabınızı oşuştururken hesab bilgilerinizide alacaktır.3 farklı hesap türü vardır.
+https://aws.amazon.com/tr/ sitesine giderek konsolda oturama tıklayarak aws hesabı alabilirsiniz.Kullanıcı hesabınızı oşuştururken hesab bilgilerinizide alacaktır.3 farklı hesap türüyle karşılacaksınız.
+
 Basic Plan :Ücretsizdir.Sınırlı sayıda depolama alanı verir.Bizde bunu kullanacağız ve sınırlı sayıda kart kayıdı tutulabilcek.
 Developer Plan:Aylık 29 Dolardır.Email yoluyla destek daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
 Bussines Plan :Aylık 100 Dolardır.7/24  telefon.chat email yoluyla destek.Daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
 
 ![amazon](https://user-images.githubusercontent.com/66904198/85624689-f7e92480-b672-11ea-9e1e-7e5912a8dfd5.png)
 
-AWS Teknolojilerinden hizmet almak için , sol üst köşede bulunan Services bölümüne tıklıyoruz.Biz embedded bir cihaz için hizmet alacağımızdan IOT Core'a tıklıyoruz.Açılan pencereden Manage bölümünden Things sekmesine tıklıyoruz.
+AWS Teknolojilerinden hizmet almak için , sol üst köşede bulunan Services bölümüne tıklıyoruz.Biz embedded bir cihaz için hizmet alacağımızdan **IOT Core**'a tıklıyoruz.Açılan pencereden Manage bölümünden Things sekmesine tıklıyoruz.
 
 ![amazondb2](https://user-images.githubusercontent.com/66904198/85917318-cb472f80-b861-11ea-9651-1aef20083e03.png)
 
-İlk olarak "Things" sekmesine tıklayınız açılan pencereden Thing'e tıklayınız ve create butonuyla bir cihaz tanımlayınız.
+İlk olarak **"Things"** sekmesine tıklayınız açılan pencereden Thing'e tıklayınız ve create butonuyla bir cihaz tanımlayınız.
 
-Son olarak Secure bölümünden certificate alıcaz.Güvenlik keyi alıp bunuda kodlarımıza ekliyecez.Crate sekmesine tıklayacaz.
+Son olarak Secure bölümünden certificate alıcaz.**Güvenlik keyi** alıp bunuda kodlarımıza ekliyecez ardından create sekmesine tıklayacaz.
 
-Secure sekmesinde Create butonuna tıklıyoruz ve açılan pencereden bir tane cihazla çalışacağımızdan "Create Single Thing"'a tıklayalım.Açılan pencereden bilgileri kendinize göre tıklayınız ve "Create certificate" tıklayınız."Açılan pencerede 
+**Secure** sekmesinde Create butonuna tıklıyoruz ve açılan pencereden bir tane cihazla çalışacağımızdan "Create Single Thing"'a tıklayalım.Açılan pencereden bilgileri kendinize göre tıklayınız ve **"Create certificate"** tıklayınız."Açılan pencerede 
 
 "A certificate for this thing : cb81cdad02.cert.pem
 
