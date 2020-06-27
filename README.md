@@ -13,7 +13,8 @@ ARM mimarisine sahip bir mikrodenetleyici olan Raspberry Pi kartı ile  RFID RC5
 6-Micro SD Kart 16 GB<br/>
 7-Adaptör 5V-3A USB-C<br/>
 8-Bağlantı için gerekli kablolar<br/>
-İşletim Sistemi<br/>
+
+## İşletim Sistemi<br/>
 Raspbian İşletim Sistemi<br/>
 
 ## İşletim Sisteminin Kurulumu
