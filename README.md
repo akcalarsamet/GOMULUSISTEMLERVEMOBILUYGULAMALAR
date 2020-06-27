@@ -140,11 +140,11 @@ Yeniden başlatma işleminden sonra SPI arayüzünün aktif olup olmadığını 
 
 `lsmod | grep spi`
 
-“spi_bcm2835” yazını görüyorsanız herşey düzgüncene ayarlanmıştır.Eğer bu yazıyı göremediyseniz buraya kadar gelinen adımları gözden geçiriniz.
+**“spi_bcm2835”** yazını görüyorsanız herşey düzgüncene ayarlanmıştır.Eğer bu yazıyı göremediyseniz,buraya kadar gelinen adımları gözden geçiriniz.
 
-RFID RC522 Test Edilmesi
+## RFID RC522 Test Edilmesi
 
-Spidev kütüphanesi kullanarak rfid arayüzü aktif hale getircez.Bunun için aşadaki komutları uygulayınız.
+**Spidev** kütüphanesi kullanarak rfid arayüzü aktif hale getircez.Bunun için aşadaki komutları uygulayınız.
 
 `sudo pip3 install spidev`
 
@@ -153,16 +153,16 @@ Spidev kütüphanesi indirdikten sonra “pip” komutunu kullanarak MFRC522 kü
 `sudo pip3 install mfrc522`
 
 Şimdi RC522'mizin aslında RFID kartlarını okuyabildiğini ve her şeyin doğru bir şekilde bağlandığını test etmek için kısa bir script yazmamız gerekecek. Nano editöryüle read.py adında bir dosya açınız.
-Read.py'deki kodları yazınız.
+read.py'deki kodları yazınız.
 
 ## 3RFID SİSTEM İÇİN VERİ TABANI OLUŞTURULMASI
 
-Okutulan kartların geçersiz,geçerli ise kime ait olduğunu anlamamız için veritabanı oluşturmamz gerekli. MYSQL Database kurup ,tablolalarımızı oluşturcaz.
-Aşadaki komutu kullanarak Raspberry Pi’mize MYSQL’I kuralım.
+Okutulan kartların geçersiz,geçerli ise kime ait olduğunu anlamamız için veritabanı oluşturmamz gerekli. MYSQL Database kurup ,tablolalarımızı oluşturacağız.
+Aşadaki komutu kullanarak Raspberry Pi’mize MYSQL’ı kuralım.
 
 `sudo apt-get install mysql-server -y`
 
-Veritabanımızı daha güvenli hale getirmek için  “secure installation” paketini kurunuz.Paketi kurmak için aşadaki komutu kullanınız.
+Veritabanımızı daha güvenli hale getirmek için  **“secure installation”** paketini kurunuz.Paketi kurmak için aşadaki komutu kullanınız.
 
 `sudo mysql_secure_installation`
 
@@ -170,7 +170,7 @@ Açılan pencerelere  “y” tuşuna basarak ilerleyiniz.Ardından şu komutu �
 
 sudo mysql -u root -p
 
-Butun bu işlemlerden sonra veritabanımızı oluşturabilirz.Veritbanınıza başka isimde verebilirsiniz.Ben “attendancesystem“ adını vereceğim.Komutunu kullanarak veritabanınızı oluşturun.
+Butun bu işlemlerden sonra veritabanımızı oluşturabilirz.Veritbanınıza başka isimde verebilirsiniz.Ben “attendancesystem“ adını vereceğim.Aşadaki komutunu kullanarak veritabanınızı oluşturun.
 
 `CREATE DATABASE attendancesystem;`
 
@@ -215,7 +215,7 @@ terminalden bu komut çalıştırılarak kart eklenip eklenmediği control edili
 
 ## KART SORGULAMA
 
-Kartlar kaydedildikten sonra ,düzgün çalıp çalışmadıgını control etmek için.Aaşadaki scripti çalıştırınız.Burda sonsuz bir döngü içinde kart sorgusu oluşturcaz.Kart bulunursa kime ait olduğunun ve saat kaçta okutulduğu veri tabanında tutlacak.Bulunamazsa geçersiz olduğu tutulacaktır. ("Select id, name FROM users WHERE rfid_uid="+str(id))  id’ye göre sorgu oluşturup veri tabanında o id’nin olup olmadığı control ediliyor.
+Kartlar kaydedildikten sonra ,düzgün çalıp çalışmadıgını control etmek için.Aaşadaki scripti çalıştırınız.Burda **sonsuz bir döngü içinde kart sorgusu oluşturacağız**.Kart bulunursa kime ait olduğunu ve saat kaçta okutulduğu veri tabanında tutulacak.Bulunamazsa geçersiz olduğu tutulacaktır. ("Select id, name FROM users WHERE rfid_uid="+str(id))  id’ye göre sorgu oluşturup veri tabanında o id’nin olup olmadığı control ediliyor.
 
 `nano ~/attendancesystem/check_attendance.py` scriptini yazdıktan sonra çalıştırarak kart yakınlaştırıp test ediniz.
 
@@ -229,19 +229,18 @@ Hatırlayınıız ,veritabanınımızın  adı attendancesystem.Veritabanını k
 
 `use attendancesystem;`
 
-"Kullanıcılar" tablosundan  aşada belirten basit bir SELECT SQL çağrısı çalıştırarak yapabiliriz. Aşağıdaki sorguda kullanılan yıldız işareti (*), tüm sütunları almak istediğimiz anlamına gelir.
+"Kullanıcılar" tablosundan  aşağıda belirten basit bir SELECT SQL sorgusunu çalıştırarak yapabiliriz. Aşağıdaki sorguda kullanılan yıldız işareti (*), tüm sütunları almak istediğimiz anlamına gelir.
 “Kullanıcılar” tablosunda bulunan tüm kullanıcıları almak için aşağıdaki komutu yazın.
 
 `SELECT * FROM users; `
 
-
-Artık "kullanıcılar" tablosunu kontrol ettiğimize göre, "attendance" tablomuza bir göz atalım. Okutunuz kartların user_id’lerine bakarak kimeait olduklarını users tablosundan control edebilirsiniz.Eğer tanımsız bir kart okutulursa user_id  0 yazacak tabloda.
+Artık "kullanıcılar" tablosunu kontrol ettiğimize göre, "attendance" tablomuza bir göz atalım. Okutunuz kartların user_id’lerine bakarak kimeait olduklarını users tablosundan kontrol edebilirsiniz.Eğer tanımsız bir kart okutulursa user_id  0 yazacak tabloda.
 
 `SELECT * FROM attendance;`
 
 ## WEB ARAYÜZÜN OLUŞTURULMASI
 
-Bu bölüme başlamadan önce, PHP ile kullanmak için NGINX'i ayarlamanız gerekmektedir.Bu ayarlar için çalıştrılacak scriptler için bir dizin oluşturalım.
+Bu bölüme başlamadan önce, PHP ile kullanmak için **NGINX**'i ayarlamanız gerekmektedir.Bu ayarlar için çalıştrılacak scriptler için bir dizin oluşturalım.
 
 `sudo mkdir /var/www/html/attendance `
 Gerekli ayarlar için githubdan aşadaki komutla scirptleri klonlayalım.
