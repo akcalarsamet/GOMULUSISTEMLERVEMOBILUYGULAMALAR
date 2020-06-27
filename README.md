@@ -91,15 +91,15 @@ Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşama
 
 Gerekli bağlantılar sağlandıysa,kütüphaneyi klonlayarak test edebiliriz.
 
-`git clone https://github.com/pimylifeup/Adafruit_Python_CharLCD.git`
+`git clone https://github.com/akcalarsamet/AdaFruitLcdLibrary
+
+Kütüphaneyi klonladığınız dizine gidiniz ve aşadaki komutları kullanarak setup.py sriptini çalıştırın.
 
 `cd ./Adafruit_Python_CharLCD `
 
 `sudo python3 setup.py install`
 
-Kütüphaneyi klonladıgınız dizine gidiniz ve aşadaki komutları kullanarak setup.py sriptini çalıştırın.
-
-Kütüphanede inen pin bağlantıları ile bizim oluşturdugumuz pin bağlantıları farklı olabilir aşadaki gibi oluşturunuz.Scripti düğzenlemek için nano editorünü kullanabilirsiniz.
+Kütüphanedeki pin bağlantıları ile bizim oluşturdugumuz pin bağlantıları farklı olabilir aşadaki gibi oluşturunuz scripti düğzenlemek için nano editorünü kullanabilirsiniz.
 
 `nano ~/Adafruit_Python_CharLCD/examples/char_lcd.py`
 
@@ -125,14 +125,15 @@ Aşadaki komutla lcd ekranınızı test edebilirsiniz.
 ## SPI Arayüzünü Etkinleştirme
 
 Raspberry Pi ile  RFID RC522 sensörünün haberleşebilmesi için SPI haberleşmeyi aktif hale getirmemiz gerekli.
+
 `sudo raspi-config`
 
 Raspberry Pi ile  RFID RC522 sensörünün haberleşebilmesi için SPI haberleşmeyi aktif hale getirmemiz gerekli.
 sudo raspi-config
-Komutu çalıştırdıktan sonra, yapılandırabileceğiniz çeşitli seçenekleri gösteren bir ekranla göreceksiniz.
+Komutu çalıştırdıktan sonra, yapılandırabileceğiniz çeşitli seçenekleri gösteren bir ekranla karşılaşacaksınız.
 Açılan pencereden yukarı aşağı tuşlarını kullanarak “5 Interfacing Options” seçin ve ENTER’a basınız.
 Açılan ekranda, “P4 SPI” seçeneğini seçiniz ve Entera basınız.
-Bu işlemlerdenm sonra SPI aktif hale gelecektir.Şu mesajla karşılamaşnız lazım.” The SPI interface is enabled”.
+Bu işlemlerdenm sonra SPI aktif hale gelecektir.Şu mesajla karşılamaşnız lazım.” **The SPI interface is enabled”.**
 Bütün ayarlarınız yapılandırılması için raspberry pi’nin resetlenmesi lazım.Aşadaki komutu kullanabilirsiniz.
 
 Yeniden başlatma işleminden sonra SPI arayüzünün aktif olup olmadığını control etmek için.Aşadaki komutu kullanabilirsiniz.
