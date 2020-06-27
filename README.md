@@ -268,10 +268,16 @@ AWS Teknolojilerinden hizmet almak için , sol üst köşede bulunan Services b�
 
 ![amazondb2](https://user-images.githubusercontent.com/66904198/85917318-cb472f80-b861-11ea-9651-1aef20083e03.png)
 
-Things sekmesinde Create butonuna tıklıyoruz ve açılan pencereden bir tane cihazla çalışacağımızdan "Create Single Thing"'a tıklayalım.Açılan pencereden bilgileri kendinize göre tıklayınız ve "Create certificate" tıklayınız."Açılan pencerede 
+İlk olarak "Things" sekmesine tıklayınız açılan pencereden Thing'e tıklayınız ve create butonuyla bir cihaz tanımlayınız.
+
+Son olarak Secure bölümünden certificate alıcaz.Güvenlik keyi alıp bunuda kodlarımıza ekliyecez.Crate sekmesine tıklayacaz.
+
+Secure sekmesinde Create butonuna tıklıyoruz ve açılan pencereden bir tane cihazla çalışacağımızdan "Create Single Thing"'a tıklayalım.Açılan pencereden bilgileri kendinize göre tıklayınız ve "Create certificate" tıklayınız."Açılan pencerede 
+
 "A certificate for this thing : cb81cdad02.cert.pem
+
 A public key : cb81cdad02.public.key	
+
 A private key	:cb81cdad02.private.key	 
-Keyleri not ediniz.Son olarak açılan pencereden activate butonuna tıklayınız.
 
-
+Keyleri not ediniz.Son olarak açılan pencereden activate butonuna tıklayınız.Son olarak aws_iot_check.py'deki gibi kodlarınızı tekrar düzenleyiniz.Aws Iot Core,Resources Groups bölümünde okutulan kartları görebilirsiniz.
