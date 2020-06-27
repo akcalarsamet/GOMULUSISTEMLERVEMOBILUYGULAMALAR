@@ -54,12 +54,13 @@ Raspberry pi,arduino başta olmak üzere bir çok mikrodenetleyeci platformu ile
 ## RFID Kart Teknolojileri
 
 RFID kartlar kronolojik olarak bakıldığında; sadece okunabilir ve içinde seri numarası bulundurabilen basit bir yapıdan hem okunabilir hem de yazılabilir, içinde bir çok bilgiyi saklayabilecek yüksek hafızaya sahip, kopyalanmaya karşı güvenli, şifreli haberleşen karmaşık bir yapıya ulaşmıştır. Bu süreçte çok değişik özelliklere sahip RFID kartlar üretilmiştir.
- Her RFID kart hafızasında fabrikasyon olarak kodlanmış bir kart numarası ile tedarik edilir. Bu kart numarasının aynısı başka hiç bir kartta tekrar kullanılmaz. Bunu üretici firmalar garanti etmektedirler. Dünya üzerinde birbirinden farklı olan bu numaralar ' Unique ID ' olarak bilinmektedir.
+ Her RFID kart hafızasında fabrikasyon olarak kodlanmış bir kart numarası ile tedarik edilir. Bu kart numarasının aynısı başka hiç bir kartta tekrar kullanılmaz. Bunu üretici firmalar garanti etmektedirler. Dünya üzerinde birbirinden farklı olan bu numaralar **Unique ID** olarak bilinmektedir.
 ## Donanım Yapısı
 
-Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşamasında bize kolaylık sağlayacaktır. RC522 modülü 8 pine sahiptir ama biz sadece okuma yapacagımız için kartlar üzerinde herhangi bir yazma işlemi olmayacağından(IRQ pini kullanılmayacak) 7 pinini kullanarak Raspberry Pi GPIO pinleri ile bağlantı kuracağız.
+Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşamasında bize kolaylık sağlayacaktır. RC522 modülü 8 pine sahiptir ;ama biz sadece okuma yapacağımız için kartlar üzerinde herhangi bir yazma işlemi olmayacağından(**IRQ pini kullanılmayacak**) 7 pin kullanarak Raspberry Pi GPIO pinleri ile bağlantı kuracağız.
 
-RFID RC522 ile Raspberry Pi Arasındaki Bağlantı <br/>
+**RFID RC522 ile Raspberry Pi Arasındaki Bağlantı **<br/>
+
 •	RC522 SDA pini     => Raspberry Pi Pin 24.  <br/>
 •	RC522  SCK pini     => Raspberry Pi Pin 23. <br/>
 •	RC522  MOSI pini  => Raspberry Pi Pin 19. <br/>
