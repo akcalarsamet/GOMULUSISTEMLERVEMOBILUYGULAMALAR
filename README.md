@@ -263,3 +263,15 @@ Developer Plan:Aylık 29 Dolardır.Email yoluyla destek daha fazla depolama alan
 Bussines Plan :Aylık 100 Dolardır.7/24  telefon.chat email yoluyla destek.Daha fazla depolama alanı.Daha fazla bilgi için kullanıcı katologunu inceleyiniz.
 
 ![amazon](https://user-images.githubusercontent.com/66904198/85624689-f7e92480-b672-11ea-9e1e-7e5912a8dfd5.png)
+
+AWS Teknolojilerinden hizmet almak için , sol üst köşede bulunan Services bölümüne tıklıyoruz.Biz embedded bir cihaz için hizmet alacağımızdan IOT Core'a tıklıyoruz.Açılan pencereden Manage bölümünden Things sekmesine tıklıyoruz.
+
+![amazondb2](https://user-images.githubusercontent.com/66904198/85917318-cb472f80-b861-11ea-9651-1aef20083e03.png)
+
+Things sekmesinde Create butonuna tıklıyoruz ve açılan pencereden bir tane cihazla çalışacağımızdan "Create Single Thing"'a tıklayalım.Açılan pencereden bilgileri kendinize göre tıklayınız ve "Create certificate" tıklayınız."Açılan pencerede 
+"A certificate for this thing : cb81cdad02.cert.pem
+A public key : cb81cdad02.public.key	
+A private key	:cb81cdad02.private.key	 
+Keyleri not ediniz.Son olarak açılan pencereden activate butonuna tıklayınız.
+
+
