@@ -37,13 +37,11 @@ SD Card Formatter programı ile SD Kart formatlanabilir. Daha sonra "Win32 Disk 
  RFID, ingilizce RADIO FREQUENCY IDENTIFICATION açılımının kısaltmasıdır. Radyo frekansı ile haberleşen ve içinde bilgi depolayabilen chip teknolojisi olarak da tanımlanabilir. Chip' in kullandığı frekansa, hafızaya, haberleşmede kullanılan protokole ve ürünün şekline göre çok farklı RFID tipleri vardır. Bir RFID ürünü kart şeklinde olabileceği gibi, disk, tüp veya herhangi bir geometride de olabilir. Bilgi alışverişi sırasında tamamen radyo frekansı kullanıldığı için temassız kontrol sistemi olarak da bilinmektedir. Bugün bilgi saklayabilen tanımlama için teknolojinin ulaştığı son noktadır.
 
 
-  RFID teknolojisine sahip ürünler pasif ve aktif olmak üzere 2 temel sınıfa ayrılır. Pasif tipteki ürünlerin içinde bir pil kaynağı yoktur. Gerekli enerjyi kendilerini okuyan cihazların antenlerinden dolayı oluşan elektrik alanından elde ederler. Bu yüzden ömürleri yaklaşık 100 yıl gibi uzun bir süredir. Ancak okuma mesafeleri kullanılan frekansa da bağlı olarak oldukça kısadır. Aktif ürünler ise enerji elde etmek için dahili bir enerji kaynağı bulundurur. Bu kartların ömürleri genelde 5-10 yıl civarındadır. Ancak okuma mesafeleri daha uzundur. ülkemizde otoyollarda kullanılan OGS sistemi aktif, HGS ve KGS sistemi ise pasif ürün grubuna ait birer örnektir.
+  RFID teknolojisine sahip ürünler pasif ve aktif olmak üzere 2 temel sınıfa ayrılır. Pasif tipteki ürünlerin içinde bir pil kaynağı yoktur. Gerekli enerjyi kendilerini okuyan cihazların antenlerinden dolayı oluşan elektrik alanından elde ederler. Bu yüzden ömürleri yaklaşık 100 yıl gibi uzun bir süredir. Ancak okuma mesafeleri kullanılan frekansa da bağlı olarak oldukça kısadır. Aktif ürünler ise enerji elde etmek için dahili bir enerji kaynağı bulundurur. Bu kartların ömürleri genelde 5-10 yıl civarındadır. Ancak okuma mesafeleri daha uzundur.Ülkemizde otoyollarda kullanılan OGS sistemi aktif, HGS ve KGS sistemi ise pasif ürün grubuna ait birer örnektir.
 
 
   RFID teknolojisi bugün tüm dünyada yaygın bir kullanım alanına sahiptir. Personel kontrolü, ürün ve hayvan takibi, güvenlik bunlardan sadece birkaçıdır. RFID kartların yüksek güvenliğe sahip olanları Dünya'da kimlik kartı ve kredi kartı olarak da kullanılmaktadır.
   
-  Basitçe RFID Sistemin Çalışma Mantığını Gösteren bir Görsel
- 
 ## RFID RC522 Sensör
 
 RC522 RFID Okuyucu Kartı, NFC frekansı olan 13,56 MHz frekansında çalışan tagler üzerinde okuma ve yazma işlemeni yapabilen, düşük güç tüketimli, ufak boyutlu bir karttır.
