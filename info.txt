@@ -1,0 +1,10 @@
+PERSONEL TAKIP KONTROL SİSTEMİ
+
+Projenin Amacı:Rfid Sistemle personellerin girişinin çıkışının kontrol edilmesi,kayıtların web arayüze aktarılması ve amazon veri tabanında tutulması.
+
+Bu proje Marmara Üniversitesi  Yüksek Lisans Elektrik & Elektronik Mühendisliği (EEM7042.1 Gömülü Sistemler ile Mobil Uygulamalar) dersi için yapılmıştır.Dersin Hocası
+Dr. Öğr. Üyesi SERKAN AYDIN'a katkılarından dolayı teşekkür ederim.
+
+Proje ilgili iletişim için: sametakcalar@gmail.com
+
+Samet Akçalar
