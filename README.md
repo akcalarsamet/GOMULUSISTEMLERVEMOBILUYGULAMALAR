@@ -59,7 +59,7 @@ RFID kartlar kronolojik olarak bakıldığında; sadece okunabilir ve içinde se
 
 Yazılım aşamsına geçmeden donanım bağlantısını yapmak,yazılım aşamasında bize kolaylık sağlayacaktır. RC522 modülü 8 pine sahiptir ;ama biz sadece okuma yapacağımız için kartlar üzerinde herhangi bir yazma işlemi olmayacağından(**IRQ pini kullanılmayacak**) 7 pin kullanarak Raspberry Pi GPIO pinleri ile bağlantı kuracağız.
 
-**RFID RC522 ile Raspberry Pi Arasındaki Bağlantı **<br/>
+**RFID RC522 ile Raspberry Pi Arasındaki Bağlantı** <br/>
 
 •	RC522 SDA pini     => Raspberry Pi Pin 24.  <br/>
 •	RC522  SCK pini     => Raspberry Pi Pin 23. <br/>
