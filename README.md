@@ -1,3 +1,4 @@
+İlk olarak kendinizi tanıtsaydınız daha iyi olmazdı ?
 # Raspberry Pi ile Personel Takip Sistemi
 ## Projenin Amacı
 ARM mimarisine sahip bir mikrodenetleyici olan Raspberry Pi kartı ile  RFID RC522 sensörü kullanılarak ,okutulan kartlarla personelin girişinin çıkışının control edilip,2*16 LCD ekranda gösterlip,web arayüz ve amazon veritabanına aktarılması.
